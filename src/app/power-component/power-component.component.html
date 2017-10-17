@@ -1,0 +1,28 @@
+<div class="maincontent">
+  
+  <form (submit)="adjustPower()" class="my-form">
+      <label>Initial Power Level: </label>
+      <input 
+        type="number"
+        name="initial_power" 
+        required 
+        min="1" 
+        max="100"
+        [(ngModel)]="power"
+        #initial_power='ngModel'
+      >
+      <input type="submit" value="Calculate Powers">
+  </form>
+  {{power}}
+  <div>
+    <app-human class="children" [myPower] = 'power'></app-human>
+    <app-saiyan class="children" [myPower] = 'power'></app-saiyan>
+    <app-super-saiyan class="children" [myPower] = 'power2'></app-super-saiyan>
+    <app-super-saiyan-two class="children" [myPower] = 'power'></app-super-saiyan-two>
+    <app-super-saiyan-three class="children" [myPower] = 'power'></app-super-saiyan-three>
+    <app-super-saiyan-four class="children" [myPower] = 'power'></app-super-saiyan-four>
+  </div>
+
+
+
+</div>

@@ -1,0 +1,6 @@
+<h4>
+    Power Level: {{ myPower *500 }}
+</h4>
+<h3 *ngIf="myPower * 500 > 9000 && myPower * 500 < 20000">Over 9000!</h3>
+<h3 *ngIf="myPower * 500 > 20000 && myPower * 500 < 50000">Superlative!</h3>
+<h3 *ngIf="myPower * 500 == 50000">The One</h3>
